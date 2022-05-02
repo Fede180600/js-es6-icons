@@ -116,6 +116,8 @@ const icons = [
 // Milestone 1
 // Partendo dalla struttura dati fornita, visualizzare in pagina un box per ogni icona, in cui è presente il nome dell'icona e l'icona stessa.
 
-// Creo l'elemento item-icon 
-// Appendo item-icon all'items-container
-// Faccio innerHTML con il template literals 
+// Imposto ciclo forEach per scorrere tutti gli Objects della array
+const itemsContainer = document.querySelector('.items-container');
+icons.forEach((element) => {
+    console.log(element);
+})
