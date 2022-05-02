@@ -116,9 +116,30 @@ const icons = [
 // Milestone 1
 // Partendo dalla struttura dati fornita, visualizzare in pagina un box per ogni icona, in cui è presente il nome dell'icona e l'icona stessa.
 
-// Prelevo il 
-const itemsContainer = document.getElementById('items-container');
+// Prelevo il items-container
+// const itemsContainer = document.getElementById('items-container');
 // Imposto ciclo forEach per scorrere tutti gli Objects della array
+// icons.forEach((element) => {
+//     const newItem = document.createElement('div');
+//     newItem.classList.add('item');
+//     itemsContainer.append(newItem);
+//     newItem.innerHTML = `
+        
+//         <div class="item-icon">
+//             <span><i class="${element.family} ${element.prefix}${element.name}"></i></span>
+//         </div>
+//         <div class="item-name">
+//             <p>${element.name}</p>
+//         </div>
+        
+//     `
+// })
+
+//Milestone 2
+//Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
+//Prelevo il items-container
+const itemsContainer = document.getElementById('items-container');
+//Imposto ciclo forEach per scorrere tutti gli Objects della array
 icons.forEach((element) => {
     const newItem = document.createElement('div');
     newItem.classList.add('item');
@@ -126,7 +147,7 @@ icons.forEach((element) => {
     newItem.innerHTML = `
         
         <div class="item-icon">
-            <span><i class="${element.family} ${element.prefix}${element.name}"></i></span>
+            <span><i class="${element.family} ${element.prefix}${element.name} ${element.color}"></i></span>
         </div>
         <div class="item-name">
             <p>${element.name}</p>
