@@ -138,20 +138,45 @@ const icons = [
 //Milestone 2
 //Ciascuna icona ha una proprietà "color": utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
 //Prelevo il items-container
-const itemsContainer = document.getElementById('items-container');
-//Imposto ciclo forEach per scorrere tutti gli Objects della array
-icons.forEach((element) => {
-    const newItem = document.createElement('div');
-    newItem.classList.add('item');
-    itemsContainer.append(newItem);
-    newItem.innerHTML = `
+// const itemsContainer = document.getElementById('items-container');
+// //Imposto ciclo forEach per scorrere tutti gli Objects della array
+// icons.forEach((element) => {
+//     const newItem = document.createElement('div');
+//     newItem.classList.add('item');
+//     itemsContainer.append(newItem);
+//     newItem.innerHTML = `
         
-        <div class="item-icon">
-            <span><i class="${element.family} ${element.prefix}${element.name} ${element.color}"></i></span>
-        </div>
-        <div class="item-name">
-            <p>${element.name}</p>
-        </div>
+//         <div class="item-icon">
+//             <span><i class="${element.family} ${element.prefix}${element.name} ${element.color}"></i></span>
+//         </div>
+//         <div class="item-name">
+//             <p>${element.name}</p>
+//         </div>
         
-    `
+//     `
+// })
+
+//  BONUS
+// Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone (animal, vegetable, user). Quando l'utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti
+const myFilter = document.getElementById('filter').value;
+myFilter.addEventListener("click", function() {
+    console.log(myFilter.value);
+    
 })
+// const itemsContainer = document.getElementById('items-container');
+// //Imposto ciclo forEach per scorrere tutti gli Objects della array
+// icons.forEach((element) => {
+//     const newItem = document.createElement('div');
+//     newItem.classList.add('item');
+//     itemsContainer.append(newItem);
+//     newItem.innerHTML = `
+        
+//         <div class="item-icon">
+//             <span><i class="${element.family} ${element.prefix}${element.name} ${element.color}"></i></span>
+//         </div>
+//         <div class="item-name">
+//             <p>${element.name}</p>
+//         </div>
+        
+//     `
+// })
