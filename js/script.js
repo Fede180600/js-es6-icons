@@ -116,8 +116,21 @@ const icons = [
 // Milestone 1
 // Partendo dalla struttura dati fornita, visualizzare in pagina un box per ogni icona, in cui è presente il nome dell'icona e l'icona stessa.
 
+// Prelevo il 
+const itemsContainer = document.getElementById('items-container');
 // Imposto ciclo forEach per scorrere tutti gli Objects della array
-const itemsContainer = document.querySelector('.items-container');
 icons.forEach((element) => {
-    console.log(element);
+    const newItem = document.createElement('div');
+    newItem.classList.add('item');
+    itemsContainer.append(newItem);
+    newItem.innerHTML = `
+        
+        <div class="item-icon">
+            <span><i class="${element.family} ${element.prefix}${element.name}"></i></span>
+        </div>
+        <div class="item-name">
+            <p>${element.name}</p>
+        </div>
+        
+    `
 })
